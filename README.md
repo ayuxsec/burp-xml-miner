@@ -1,6 +1,6 @@
 ## Burp XML Miner
 
-```bash
+```console
 $ ./xmlminer extract -h  # go install github.com/ayuxsec/burp-xml-miner/cmd/xmlminer@latest
 Extract objects from Burp Suite XML output
 
