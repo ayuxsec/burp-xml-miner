@@ -11,6 +11,7 @@ var (
 	extractAll      bool
 	extractResponse bool
 	extractRequest  bool
+	urlFilter       string
 )
 
 func NewExtractCmd() *cobra.Command {
@@ -28,6 +29,7 @@ func NewExtractCmd() *cobra.Command {
 	cmd.Flags().BoolVar(&extractAll, "all", false, "Extract all objects")
 	cmd.Flags().BoolVar(&extractRequest, "request", false, "Extract HTTP requests")
 	cmd.Flags().BoolVar(&extractResponse, "response", false, "Extract HTTP responses")
+	cmd.Flags().StringVar(&urlFilter, "url-filter", urlFilter, "Only give output if any part in url has this string as it's substring")
 
 	return cmd
 }
@@ -39,6 +41,7 @@ func runExtract() error {
 		extractAll,
 		extractRequest,
 		extractResponse,
+		urlFilter,
 	)
 
 	return parser.Print()
