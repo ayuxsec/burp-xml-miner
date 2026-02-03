@@ -65,11 +65,11 @@ func (p *BurpParser) Print() error {
 		}
 
 		if p.IncludeReq {
-			p.decodeAndPrint("\nREQUEST:\n", item.Request.Data)
+			p.decodeAndPrint("\n---REQUEST---\n", item.Request.Data)
 		}
 
 		if p.IncludeResp {
-			p.decodeAndPrint("\nRESPONSE:\n", item.Response.Data)
+			p.decodeAndPrint("\n---RESPONSE---\n", item.Response.Data)
 		}
 	}
 	return nil
