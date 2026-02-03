@@ -12,5 +12,6 @@ Flags:
   -h, --help       help for extract
       --request    Extract HTTP requests
       --response   Extract HTTP responses
+      --url-filter string   Only give output if any part in url has this string as it's substring
       --urls       Extract URLs
 ```
